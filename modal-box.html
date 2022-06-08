@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="modal-box.js"></script>
+	<title> Modal Box </title>
+	<script type="text/javascript">
+		function Open(id) {
+			document.getElementById(id).open();
+		}
+	</script>
+	<style>
+		.styled{
+			--modal-border-color: rgb(85, 176, 252);
+			--modal-border-width: 7px;
+			--modal-border-style: solid;
+			--modal-font-family: "Arial Narrow", sans-serif;
+			--modal-header-background-color: rgb(100, 100, 100);
+			--modal-header-color: white;
+			--modal-header-font-size: 5vh;
+			--modal-footer-background-color: rgb(100, 100, 100);
+			--modal-footer-color: white;
+			--modal-footer-font-size: 2vh;
+			--modal-close-btn-background-color: rgb(100, 100, 100);
+			--modal-close-btn-color: white;
+			--modal-hover-close-btn-background-color: rgb(221, 128, 51);
+			--modal-hover-close-btn-color: black;
+		}
+		.mdl-content{
+			box-sizing: border-box;
+			height: 100%;
+			width: 100%;
+			font-size: 20px;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="Open('modal1')"> Modal box </button>
+	<button onclick="Open('modal2')"> Modal box with custom style </button>
+	<button onclick="Open('modal3')"> Modal box with content </button>
+	<bv-modal id="modal1" title="Modal box" footer="Made by: Borislav Vučićević" >
+		This is default style of the modal box.
+	</bv-modal>
+	<bv-modal class="styled" id="modal2" title="Modal box with custom style" footer="Made by: Borislav Vučićević">
+		This is a modal box with custom css style.
+	</bv-modal>
+	<bv-modal id="modal3" title="Modal box with content" footer="Made by: Borislav Vučićević">
+		<div class="mdl-content">
+			<form action="">
+				Enter your name: <input type="text" name="" id=""> <br><br>
+				Enter your surname: <input type="text" name="" id=""> <br><br>
+				Choose gender: <br><br>
+				Male <input type="radio" name="gender" id="" value="male" checked> <br><br>
+				Female <input type="radio" name="gender" id="" value="female"> <br><br>
+				<input type="submit" value="Submit form">
+			</form>
+		</div>
+	</bv-modal>
+</body>
+</html>

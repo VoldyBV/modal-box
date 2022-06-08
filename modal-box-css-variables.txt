@@ -1,0 +1,27 @@
+GLOBAL
+--modal-border-color
+--modal-border-width
+--modal-border-style
+--modal-font-family
+
+MODAL BODY
+--modal-body-background-color
+
+MODAL HEADER:
+--modal-header-background-color
+--modal-header-color
+--modal-header-font-size
+
+MODAL FOOTER
+--modal-footer-background-color
+--modal-footer-color
+--modal-footer-font-size
+
+CLOSE BUTTON
+--modal-close-btn-font-size
+--modal-close-btn-background-color
+--modal-close-btn-color
+
+CLOSE BUTTON:HOVER
+--modal-hover-close-btn-background-color
+--modal-hover-close-btn-color
