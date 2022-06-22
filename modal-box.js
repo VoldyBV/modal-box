@@ -1,7 +1,17 @@
 (function() {
 	window.addEventListener("DOMContentLoaded", () => {
 		var link = `<link rel="stylesheet" href="https://combinatronics.com/VoldyBV/modal-box/master/modal-box.css">`;
-		document.head.insertAdjacentHTML("afterbegin", link)
+		document.head.insertAdjacentHTML("afterbegin", link);
+
+		var modals = document.body.querySelectorAll("bv-modal");
+
+		if(modals.length > 0){
+			modals.forEach((element) => {
+				if(element.hasAttribute("opened")){
+					element.open();
+				}
+			})
+		}
 	});
 
 	class BVModal extends HTMLElement{
