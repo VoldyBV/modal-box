@@ -1,9 +1,9 @@
 (function() {
 	window.addEventListener("DOMContentLoaded", () => {
-		var link = `<link rel="stylesheet" href="modal-box.css">`;
+		var link = `<link rel="stylesheet" href="https://combinatronics.com/VoldyBV/modal-box/master/modal-box.css">`;
 		document.head.insertAdjacentHTML("afterbegin", link)
 	});
-	
+
 	class BVModal extends HTMLElement{
   		constructor(){
   			super();
