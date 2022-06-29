@@ -92,7 +92,7 @@ bv-modal div.close-button:hover{
     animation: modal-close-button 0.5s;
 }
 
-bv-modal div.content{
+bv-modal div.modal-content{
     height: 80%;
     width: 100%;
     box-sizing: border-box;
