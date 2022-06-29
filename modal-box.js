@@ -38,11 +38,11 @@
 		attributeChangedCallback(name, oldValue, newValue) {
 			switch(name){
 				case 'title': 
-					var elem = this.querySelector("div.title[title]");
+					var elem = this.querySelector("div.modal-title[title]");
 					if(elem) elem.innerHTML = this.title;
 					break;
 				case 'footer':
-					var elem = this.querySelector("div.footer[info]");
+					var elem = this.querySelector("div.modal-footer[info]");
 					if(elem) elem.innerHTML = this.footer;
 					break;
 				default: break;
@@ -51,18 +51,18 @@
 
 		#addBody(){
 			var body = `
-				<div class="overlay">
-					<div class="body">
-						<div class="header">
-							<div class="title" title>
+				<div class="modal-overlay">
+					<div class="modal-body">
+						<div class="modal-header">
+							<div class="modal-title" title>
 								this is title
 							</div><!--
-							--><div class="close-button" close>
+							--><div class="modal-close-button" close>
 								&#10006;
 							</div>
 						</div>
 						<div class="modal-content" content></div>
-						<div class="footer" info>
+						<div class="modal-footer" info>
 							this is footer.
 						</div>
 					</div>
@@ -72,22 +72,22 @@
 			var content = this.innerHTML;
 			this.innerHTML = body;
 			this.style.display = "none";
-			this.querySelector("div.content[content]").innerHTML = content;
-			this.querySelector("div.close-button[close]").addEventListener("click", Close);
-			this.querySelector("div.title[title]").innerHTML = this.title;
-			this.querySelector("div.footer[info]").innerHTML = this.footer;
+			this.querySelector("div.modal-content[content]").innerHTML = content;
+			this.querySelector("div.modal-close-button[close]").addEventListener("click", Close);
+			this.querySelector("div.modal-title[title]").innerHTML = this.title;
+			this.querySelector("div.modal-footer[info]").innerHTML = this.footer;
 			this.addEventListener("contextmenu", function (event){ event.preventDefault();})
 		}
 		open(){
 			this.style.display = "block";
 		}
 		close(){
-			this.querySelector("div.overlay").setAttribute("style", "animation: modal-hide-away 0.3s ease-in-out");
-			this.querySelector("div.body").setAttribute("style", "animation: modal-shink-away 0.3s ease-in-out");
+			this.querySelector("div.modal-overlay").setAttribute("style", "animation: modal-hide-away 0.3s ease-in-out");
+			this.querySelector("div.modal-body").setAttribute("style", "animation: modal-shink-away 0.3s ease-in-out");
 			function Zatvori() { 
 				this.style.display = "none";
-				this.querySelector("div.overlay").removeAttribute("style");
-				this.querySelector("div.body").removeAttribute("style");
+				this.querySelector("div.modal-overlay").removeAttribute("style");
+				this.querySelector("div.modal-body").removeAttribute("style");
 				if(this.hasAttribute("onclose")){
 					eval(this.getAttribute("close"))
 				}

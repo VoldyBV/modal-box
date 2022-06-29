@@ -1,4 +1,4 @@
-bv-modal div.overlay{
+bv-modal div.modal-overlay{
     position: absolute;
     top: 0%;
     left: 0%;
@@ -8,7 +8,7 @@ bv-modal div.overlay{
     animation: modal-show-up 0.3s ease-in-out;
 }
 
-bv-modal div.body{
+bv-modal div.modal-body{
     overflow: hidden;
     position: absolute;
     bottom: 5%;
@@ -24,7 +24,7 @@ bv-modal div.body{
     font-family: var(--modal-font-family, "Times New Roman", Times, serif)
 }
 
-bv-modal div.header, bv-modal div.footer{
+bv-modal div.modal-header, bv-modal div.modal-footer{
     height: 10%;
     width: 100%;
     box-sizing: border-box;
@@ -35,7 +35,7 @@ bv-modal div.header, bv-modal div.footer{
     font-size: var(--modal-header-font-size, 30px)
 }
 
-bv-modal div.footer{
+bv-modal div.modal-footer{
     display: flex;
     align-items: center;
     padding: 1%;
@@ -48,7 +48,7 @@ bv-modal div.footer{
     font-size: var(--modal-footer-font-size, 20px)	
 }
 
-bv-modal div.title{
+bv-modal div.modal-title{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -66,7 +66,7 @@ bv-modal div.title{
     box-sizing: border-box;
 }
 
-bv-modal div.close-button{
+bv-modal div.modal-close-button{
     position: absolute;
     top: 0px;
     right: 0px;
@@ -85,7 +85,7 @@ bv-modal div.close-button{
     color: var(--modal-close-btn-color, black);
 }
 
-bv-modal div.close-button:hover{
+bv-modal div.modal-close-button:hover{
     color: var(--modal-hover-close-btn-color, white);
     background-color: var(--modal-hover-close-btn-background-color, #F5110A);
 
