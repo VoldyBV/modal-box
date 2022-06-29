@@ -61,7 +61,7 @@
 								&#10006;
 							</div>
 						</div>
-						<div class="content" content></div>
+						<div class="modal-content" content></div>
 						<div class="footer" info>
 							this is footer.
 						</div>
