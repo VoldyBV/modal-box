@@ -89,7 +89,7 @@
 				this.querySelector("div.modal-overlay").removeAttribute("style");
 				this.querySelector("div.modal-body").removeAttribute("style");
 				if(this.hasAttribute("onclose")){
-					eval(this.getAttribute("close"))
+					eval(this.getAttribute("onclose"))
 				}
 			}
 			setTimeout(Zatvori.bind(this), 300);
