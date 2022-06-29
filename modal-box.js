@@ -80,6 +80,9 @@
 		}
 		open(){
 			this.style.display = "block";
+			if(this.hasAttribute("onopen")){
+				eval(this.getAttribute("onopen"))
+			}
 		}
 		close(){
 			this.querySelector("div.modal-overlay").setAttribute("style", "animation: modal-hide-away 0.3s ease-in-out");
