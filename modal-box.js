@@ -84,12 +84,15 @@
 		close(){
 			this.querySelector("div.overlay").setAttribute("style", "animation: modal-hide-away 0.3s ease-in-out");
 			this.querySelector("div.body").setAttribute("style", "animation: modal-shink-away 0.3s ease-in-out");
-			function Zatvori(elem) { 
-				elem.style.display = "none";
-				elem.querySelector("div.overlay").removeAttribute("style");
-				elem.querySelector("div.body").removeAttribute("style");
+			function Zatvori() { 
+				this.style.display = "none";
+				this.querySelector("div.overlay").removeAttribute("style");
+				this.querySelector("div.body").removeAttribute("style");
+				if(this.hasAttribute("onclose")){
+					eval(this.getAttribute("close"))
+				}
 			}
-			setTimeout(Zatvori, 300, this);
+			setTimeout(Zatvori.bind(this), 300);
 		}
 
 		set title(newValue){
