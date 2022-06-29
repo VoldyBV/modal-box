@@ -85,7 +85,7 @@
 					eval(this.getAttribute("onopen"))
 				}
 			}
-			setTimeOut(Otvori.bind(this), 500);
+			setTimeout(Otvori.bind(this), 500);
 		}
 		close(){
 			this.querySelector("div.modal-overlay").setAttribute("style", "animation: modal-hide-away 0.3s ease-in-out");
